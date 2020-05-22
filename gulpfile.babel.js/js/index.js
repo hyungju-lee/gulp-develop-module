@@ -19,7 +19,7 @@ export const script = () => {
         .pipe(babel())
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
-        .pipe(dest(`${config.dist}/js`, {sourcemaps: true}))
+        .pipe(dest(`${config.dist}/js`, {sourcemaps: '.'}))
 }
 
 export const libs = () => {

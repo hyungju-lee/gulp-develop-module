@@ -29,5 +29,5 @@ export const sass = () => {
         .pipe(rename({
             extname: '.min.css'
         }))
-        .pipe(dest(`${config.dist}/css`, {sourcemaps: true}))
+        .pipe(dest(`${config.dist}/css`, {sourcemaps: '.'}))
 }
