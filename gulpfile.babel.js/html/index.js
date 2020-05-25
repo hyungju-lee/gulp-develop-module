@@ -8,11 +8,7 @@ import cheerio from 'cheerio';
 import config from '../../config.json';
 
 export const process_html = () => {
-    return src([
-        `${config.src}/html/**/*.html`,
-        `!${config.src}/html/**/@*`,
-        `!${config.src}/html/includes/**/*`
-    ])
+    return src(`${config.src}/html/**/*.html`)
         .pipe(ejs(config.ejsVars))
         .pipe(dest(`${config.dist}/html`))
 }
